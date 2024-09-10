@@ -6,7 +6,7 @@ class Product(models.Model):
     content = models.TextField()
     created_at= models.DateTimeField(auto_now_add=True)
     updated_at= models.DateTimeField(auto_now=True)
-    image=models.ImageField(upload_to='products/image/') # 이미지필드 , 추가설정
+    image=models.ImageField(upload_to='products/image/',null=True,blank=True) # 이미지필드 , 추가설정
 
 
 class Comment(models.Model):
